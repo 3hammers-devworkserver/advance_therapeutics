@@ -1,7 +1,7 @@
 <?php get_header();?>
 <?php
 // Start the loop.
-if(have_posts()):  while ( have_posts() ) : the_post();
+if( have_posts() ):  while ( have_posts() ) : the_post();
 ?>
 <section class="light-gray step-wrapper">
   <div class="step3">
@@ -9,12 +9,11 @@ if(have_posts()):  while ( have_posts() ) : the_post();
       <div class="row">
         <div class="col-md-12">
          
-          <div class="step-radio-block">
         <form id="example-advanced-form" method="post" action="javascript:;" class="formsubmit">
         <h3>First step</h3>
         <fieldset>
-          <div class="col-md-12">
                    <h2 class="prescription-title">
+
                     <?php the_excerpt(); ?> 
                     </h2>
                    <div class="step-radio-block">
@@ -109,14 +108,14 @@ if(have_posts()):  while ( have_posts() ) : the_post();
                             </div>
                             <div class="col-md-4 col-sm-4">
                               <label for="">DOB <em>*</em></label>
-                              <div class="row">
-                                <div class="col-md-4"><select name="dyear" id="dyear" class="form-control required">
+                              <div class="dob-select">
+                                  <select name="dyear" id="dyear" class="form-control required">
                                     <option value="">Year</option>
                                     <?php for($i = date('Y'); $i >= 1800; $i-- ) :?>
                                       <option value="<?php echo $i;?>"><?php echo $i;?></option>
                                    <?php  endfor; ?>
-                                  </select> </div>
-                                <div class="col-md-4"><select name="dmonth" id="dmonth" class="form-control required">
+                                  </select> 
+                                <select name="dmonth" id="dmonth" class="form-control required">
                                     <option value="">Month</option>
                                     <option value="jan">Jan</option>
                                     <option value="feb">Feb</option>
@@ -130,15 +129,15 @@ if(have_posts()):  while ( have_posts() ) : the_post();
                                     <option value="oct">Oct</option>
                                     <option value="nov">Nov</option>
                                     <option value="dec">Dec</option>
-                                  </select> </div>
-                                <div class="col-md-4"><select name="dday" id="dday" class="form-control required">
+                                  </select> 
+                                  <select name="dday" id="dday" class="form-control required">
                                     <option value="">Day</option>
                                     <?php
                                     for($d= 1; $d <= 31; $d++): 
                                       ?>
                                     <option value="<?php echo $d;?>"><?php echo $d;?></option>
                                   <?php endfor; ?>
-                                  </select>  </div>
+                                  </select>
                               </div>
                               
                                   
@@ -153,12 +152,12 @@ if(have_posts()):  while ( have_posts() ) : the_post();
                         </div>
                         <div class="form-group">
                           <div class="row">
-                            <div class="col-md-8 col-sm-8">
+                            <div class="col-md-8 col-sm-6">
                               <label for="">Allergies <em>*</em></label>
                               <input type="text" class="form-control required valid" name="allergies" value="">
                             </div>
                       
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-4 col-sm-6">
                               <label for=""> Patient Demographics Sheet <em>*</em></label>
                               <span class="btn btn-secondary btn-file">
                                  <i class="fa fa-image"></i> Upload Demographics Sheet <input type="file" hidden name="file">
@@ -192,7 +191,6 @@ if(have_posts()):  while ( have_posts() ) : the_post();
 
           </fieldset>
          </form>
-          </div>
         
         </div>
       </div>

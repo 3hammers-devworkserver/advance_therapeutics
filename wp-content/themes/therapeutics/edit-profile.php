@@ -9,7 +9,7 @@ get_header(); ?>
       <div class="container">
         <form id="pippin_edit_form" action="javascript:void(0);" method="POST" novalidate>
         <div class="row">
-          <div class="col-md-4 col-sm-4">
+          <div class="col-md-4 col-sm-5">
             <div class="profile-block">
               <?php   $current_user = wp_get_current_user(); ?>            
               <input type="hidden" class="" name="userid" value="<?php echo $current_user->ID;?> ">
@@ -48,7 +48,7 @@ get_header(); ?>
             </div>
             
           </div>
-          <div class="col-md-8 col-sm-8">
+          <div class="col-md-8 col-sm-7">
             <div class="errormsg alert alert-danger" style="display:none;"></div>
             <div class="successmsg alert alert-success" style="display:none;"></div> 
             <h2 class="inner_page_title">My <span>Profile</span></h2>

@@ -116,19 +116,22 @@
            <div class="secondary-footer">
                <div class="container">
                    <div class="row">
-                       <div class="col-md-6 text-left">
+                       <div class="col-md-6 col-sm-6 text-left">
+                            <?php if(ot_get_option('pp_copyrights') != ''): ?>
                            <p>
-                            <?php if(ot_get_option('pp_copyrights') != ''): 
-                            echo ot_get_option('pp_copyrights'); else: 
-                            echo '&copy;Advance Therapeutics. All Rights Reserved'; endif;?>
+                           <?php  echo ot_get_option('pp_copyrights'); 
+                            else: 
+                            echo '&copy;Advance Therapeutics. All Rights Reserved'; 
+                            ?>
                            </p>
-                          <p>
+                           <?php endif;?>
                           </div>
-                          <div class="col-md-6 text-right">
+                          <div class="col-md-6 col-sm-6 text-right">
+                          <p>
                            <a href="http://3hammers.com" target="_blank">
-              Digital Agency &nbsp;
-              <img src="<?php echo get_template_directory_uri(). '/assets/images/3hammers_footer.png'; ?>" width="30">
-            </a></p>
+                          Digital Agency &nbsp;
+                          <img src="<?php echo get_template_directory_uri(). '/assets/images/3hammers_footer.png'; ?>" width="30">
+                        </a></p>
                        </div>
                    </div>
                </div>
@@ -143,6 +146,7 @@
     <script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/jasny-bootstrap.min.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap-tabcollapse.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.flexslider.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/owl.carousel.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/scripts.js"></script>

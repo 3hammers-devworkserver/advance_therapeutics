@@ -23,7 +23,7 @@ get_header();
 
                     <div class="row">
 
-                        <div class="col-md-5">
+                        <div class="col-md-5 col-sm-5">
                             <h2 class="inner_page_title">contact <span>info</span></h2>
                             <div class="content">                   
                               <div class="icon-box-wrap">
@@ -102,7 +102,7 @@ get_header();
                             
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7 col-sm-7">
                             <h2 class="inner_page_title">keep<span> in touch</span></h2>
                             <div class="content">                   
                               <p class="lead">Don’t be a stranger. We would like to hear from you as much as possible.</p>

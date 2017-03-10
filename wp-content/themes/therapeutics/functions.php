@@ -50,6 +50,7 @@ require get_template_directory() . '/dompdf/dompdf_config.inc.php';
 require get_template_directory() . '/fpd/fpdf.php';
 require get_template_directory() . '/inc/class.html2text.inc';
 
+//remove_filter('the_content', 'wpautop');
 
 if ( ! function_exists( 'twentyfifteen_setup' ) ) :
 /**
@@ -743,7 +744,7 @@ function shortcode_newsroom(){
 	                        <div class="news-list">
 	                        	<header class="post-entry-header clearfix">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-md-8 col-sm-8">
 							<div class="share">
 								<div class="post-meta">
                                         <ul class="list-unstyled list-inline">
@@ -769,7 +770,7 @@ function shortcode_newsroom(){
                                     </div>
                             </div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<span class="view-post">
 								<a href="<?php echo get_the_permalink( $new->ID ); ?>">
 									View post
@@ -782,13 +783,13 @@ function shortcode_newsroom(){
 				</header>
 	                        		
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-4 col-sm-4">
 										<h1>
 											<a href="<?php echo get_the_permalink($new->ID); ?>" class=""><?php echo wp_trim_words( $new->post_title, '7', '...' );?></a>
 										</h1>
 										<span><?php echo $date = get_the_date( 'F j, Y', $new->ID ); ?></span>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-8 col-sm-8">
 										<?php $news_image_url = wp_get_attachment_url( get_post_thumbnail_id( $new->ID )); ?>
 										<div class="list-content">
 										<p>
@@ -1923,10 +1924,10 @@ function loggedin_page() {
               <?php endif; ?>
               <div class="info-rxnew alert alert-success" style="<?php echo $style1; ?>">A new RX has been written successfully and data has been sent in pdf format to patient email.</div>
               <div class="info-rxrefill alert alert-success" style="<?php echo $style; ?>">The RX has been refilled and data has been sent in pdf format to patient email.</div>
-            	<div class="vertical-tab row">
+            	<div class="vertical-tab">
 
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs" role="tablist" id="myTab">
     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
     <li role="presentation"><a href="#refillrx" aria-controls="profile" role="tab" data-toggle="tab">Refill RX</a></li>
       </ul>

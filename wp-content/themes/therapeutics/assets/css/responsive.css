@@ -52,7 +52,7 @@
 	  width: 90%;
 	}
 	.step-wrapper {
-	  padding: 50px 0;
+	  padding: 120px 0;
 	}
 	.image-right-bordered .img-block::after{
 		display: none;
@@ -63,6 +63,36 @@
 	.testimonial-wrapper .testimonial-content {
 	  padding: 120px 0;
 	}
+	.footer-wrapper .secondary-footer .container{
+		padding-left:15px;
+		padding-right: 15px;
+	}
+	.dob-select select.form-control {
+	  margin-right: 11px;
+	}
+	.vertical-tab .nav-tabs {
+
+	  width: 150px;
+	}
+	.vertical-tab .tab-content {
+	  margin-left: 151px;
+	}
+	.dataTables_wrapper {
+	  overflow-x: scroll;
+	  overflow-y: hidden;
+	}
+	.step1-btn-group .btn{
+		width: 50%;
+	}
+	/*newsroom*/
+	.news-list .list-content {
+	  padding-left: 0;
+	}
+	.share .post-meta .dropdown-menu{
+		left: inherit;
+		right: 0;
+	}
+
 
 }
 
@@ -80,6 +110,9 @@
 	}
 	.login-page .login-wrapper .login-footer p {
 	  font-size: 13px;
+	}
+	.register-page .registration-from .dob-select .form-control {
+	  margin-right: 14px;
 	}
 }
 
@@ -195,6 +228,17 @@
 	}
 	.footer-wrapper .secondary-footer .container{
 		margin-top: 30px;
+		padding-left:15px;
+		padding-right: 15px;
+	}
+	.secondary-footer .text-left,
+	.secondary-footer .text-right{
+		text-align: center;
+
+	}
+	.secondary-footer a{
+		display: inline-block;
+		margin-top: 10px;
 	}
 	/*inner pages*/
 	.inner-banner .inner-header {
@@ -204,6 +248,12 @@
 	.testimonial-wrapper .testimonial-content,
 	.calltoaction-wrapper {
 	  padding: 30px 0;
+	}
+	.calltoaction-wrapper h3 {
+	  font-size: 20px;
+	}
+	.calltoaction-wrapper h2 {
+	  font-size: 24px;
 	}
 	.inner-content.patient-register{
 		/*padding-top: 120px;*/
@@ -299,6 +349,19 @@
 	.patient-form .form-group input{
 		margin-bottom: 15px;
 	}
+	.patient-form .form-group .dob-select:after{
+		clear: both;
+		content: "";
+		display: block;
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+	.patient-form .form-group .dob-select select.form-control{
+		margin-right: 14px;
+	}
+	.patient-form .form-group .dob-select select.form-control:last-child{
+		margin-right:0;
+	}
 	.auth{
 		right: 70px;
 	}
@@ -333,6 +396,50 @@
 	.image-right-bordered .img-block::after{
 		display: none;
 	}
+	.patient-register-form .dob-select select.form-control {
+	  margin-right: 11px;
+	}
+
+	.vertical-tab .panel-title a {
+	    position: relative;
+	    display: block;
+	    text-align: left;
+	}
+	.vertical-tab .panel-title a:before,
+	.vertical-tab .panel-title a.collapsed:before {
+	    font-family: 'FontAwesome';
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	}
+	.vertical-tab .panel-title a:before {
+	    content: "\f056";
+	    color: #d3dad3;
+	}
+	.vertical-tab .panel-title a.collapsed:before {
+	    content: "\f055";
+	    color: #92ce1d;
+	}
+	.dataTables_wrapper {
+	  overflow-x: scroll;
+	  overflow-y: hidden;
+	}
+	/* newsroom */
+	.news-list .list-content {
+	  padding-left: 0;
+	  padding-top: 15px;
+	}
+	.news-list header.post-entry-header .share .post-meta ul li {
+	  margin-bottom: 10px;
+	}
+	.news-list header.post-entry-header .view-post {
+	  float: left;
+	}
+	.share .post-meta .dropdown-menu{
+		left: inherit;
+		right: 0;
+	}
+
 
 }
 	

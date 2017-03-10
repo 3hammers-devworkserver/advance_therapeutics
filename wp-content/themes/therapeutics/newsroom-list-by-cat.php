@@ -43,7 +43,7 @@ $count = count($news);
 <div class="news-list">
 	                        	<header class="post-entry-header clearfix">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-md-8 col-sm-8">
 							<div class="share">
 								<div class="post-meta">
                                         <ul class="list-unstyled list-inline">
@@ -65,7 +65,7 @@ $count = count($news);
                                     </div>
                             </div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<span class="view-post">
 								<a href="<?php echo get_the_permalink( get_the_ID() ); ?>">
 									View post
@@ -78,13 +78,13 @@ $count = count($news);
 				</header>
 	                        		
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-4 col-sm-4">
 										<h1>
 											<a href="<?php echo get_the_permalink( get_the_ID() ); ?>" class=""><?php echo wp_trim_words( the_title(), '7', '...' );?></a>
 										</h1>
 										<span><?php echo $date = get_the_date( 'F j, Y', get_the_ID() ); ?></span>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-8 col-sm-8">
 										<?php $news_image_url = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 										<div class="list-content">
 										<p>

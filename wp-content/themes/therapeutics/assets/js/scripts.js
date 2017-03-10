@@ -75,10 +75,7 @@
             touch:false
           });
 
-        $(this).scrollTop(0);
-
-
-       
+        $(this).scrollTop(0);    
 
 
         

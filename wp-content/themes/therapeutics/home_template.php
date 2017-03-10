@@ -204,17 +204,17 @@ get_header();
                 <div class="container">
                     <div class="post-block">
                         <?php $k = 1; ?>
-                        <?php $news= get_posts(array(
+                        <?php $news = query_posts(array(
                             'post_type' => 'news',
                             'posts_per_page' => 2,
                             'order' => 'ASC' ) ); ?>
-                            <?php if($news) :            
-                            foreach( $news as $key => $new ): 
-                            if ($k % 2 == 1): ?>
+                            <?php if( have_posts() ) :            
+                            while( have_posts() ) : the_post(); 
+                            if ($k % 2 == 1): ?> 
                         <div class="row">
                             <div class="col-md-5 col-sm-5">
-                            <?php $news_image_url = wp_get_attachment_url( get_post_thumbnail_id( $new->ID )); ?>
-                            <a href= "<?php echo get_the_permalink($new->ID);?>" >
+                            <?php $news_image_url = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
+                            <a href= "<?php echo get_the_permalink( get_the_ID() );?>" >
                                 <div class="post-image bg-image" style="background-image:
                                 url('<?php echo $news_image_url;?>');">                                    
                                 </div>
@@ -225,8 +225,8 @@ get_header();
                                     <div class="post-meta">
                                         <ul class="list-unstyled list-inline">
                                             <li><i class="fa fa-user"></i><em>Posted by</em><a href="#">
-                                                <?php echo $new->post_author;?></a></li>
-                                            <?php $cats = get_the_terms( $new->ID, 'news_category' );  ?>
+                                                <?php the_author();?></a></li>
+                                            <?php $cats = get_the_terms( get_the_ID(), 'news_category' );  ?>
                                             <li><i class="fa fa-tag"></i>
                                                 
                                                 <a href="<?php echo site_url().'/list-by-cat?cat='.$cats[0]->slug; ?>"><?php echo $cats[0]->name; ?></a></li>
@@ -234,14 +234,14 @@ get_header();
                                         </ul>
                                     </div>
                                     <div class="post-head">
-                                        <h1 class="post-title"><a href="<?php echo get_the_permalink($new->ID); ?>" class=""><?php echo $new->post_title;?></a></h1>
+                                        <h1 class="post-title"><a href="<?php echo get_the_permalink( get_the_ID() ); ?>" class=""><?php the_title();?></a></h1>
                                     </div>
                                     <div class="post-content">
                                         <p>
-                                            <?php echo $new->post_content;?>
+                                            <?php echo wp_trim_words( the_content(), '100', '...' );?>
                                         </p>
                                     </div>
-                                    <a href="<?php echo get_the_permalink($new->ID); ?>" class="">Read More</a>
+                                    <a href="<?php echo get_the_permalink( get_the_ID() ); ?>" class="">Read More</a>
                                 </div>
                             </div>
                         </div>                       
@@ -253,8 +253,8 @@ get_header();
                                     <div class="post-meta">
                                         <ul class="list-unstyled list-inline">
                                             <li><i class="fa fa-user"></i><em>Posted by</em><a href="#">
-                                                <?php echo $new->post_author;?></a></li>
-                                            <?php $cats = get_the_terms( $new->ID, 'news_category' );  ?>
+                                                <?php the_author();?></a></li>
+                                            <?php $cats = get_the_terms( get_the_ID(), 'news_category' );  ?>
                                             <li><i class="fa fa-tag"></i>
                                                 
                                                 <a href="<?php echo site_url().'/list-by-cat?cat='.$cats[0]->slug; ?>"><?php echo $cats[0]->name; ?></a></li>
@@ -262,24 +262,24 @@ get_header();
                                         </ul>
                                     </div>
                                     <div class="post-head">
-                                        <h1 class="post-title"><a href="<?php echo get_the_permalink($new->ID); ?>" class=""><?php echo $new->post_title;?></a></h1>
+                                        <h1 class="post-title"><a href="<?php echo get_the_permalink( get_the_ID() ); ?>" class=""><?php the_title();?></a></h1>
                                     </div>
                                     <div class="post-content">
                                         <p>
-                                            <?php echo $new->post_content;?>
+                                            <?php echo wp_trim_words( the_content(), '100', '...' );?>
                                         </p>
                                     </div>
-                                    <a href="<?php echo get_the_permalink($new->ID); ?>" class="">Read More</a>
+                                    <a href="<?php echo get_the_permalink( get_the_ID() ); ?>" class="">Read More</a>
                                 </div>
                             </div>
                             <div class="col-md-5 col-sm-5">
-                                <?php $news_image_url1 = wp_get_attachment_url(get_post_thumbnail_id( $new->ID));?>
-                               <a href="<?php echo get_the_permalink($new->ID); ?>" class=""> <div class="post-image bg-image" style="background-image:
+                                <?php $news_image_url1 = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );?>
+                               <a href="<?php echo get_the_permalink( get_the_ID() ); ?>" class=""> <div class="post-image bg-image" style="background-image:
                                 url('<?php echo $news_image_url1;?>');">
                                 </div></a>
                             </div>
                         </div>                    
-                        <?php  endif; $k++; endforeach; endif; ?>                  
+                        <?php  endif; $k++; endwhile; endif; ?>                  
                     </div>
                    
                 </div>

@@ -2,6 +2,20 @@
     $(document).ready(function() {
 
 
+$('p').each(function() {
+    var $this = $(this);
+    if($this.html().replace(/\s|&nbsp;/g, '').length == 0 || $(this).find('br').length )
+        $this.remove();
+
+    
+});
+
+$('#main').each(function() {
+    $(this).children('.row').addClass('blockwrapper');
+});
+
+$('#myTab').tabCollapse();
+
 $('#example').DataTable();
 $('li.dropdown').children('a').addClass('dropdown-toggle');
 $('a.dropdown-toggle').children('i').addClass('fa fa-angle-down');
