@@ -1,0 +1,52 @@
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+@mixin transition($property, $duration, $timing, $delay) {
+  -webkit-transition: $property $duration $timing $delay;
+  -moz-transition: $property $duration $timing $delay;
+  -ms-transition: $property $duration $timing $delay;
+  -o-transition: $property $duration $timing $delay;
+  transition: $property $duration $timing $delay;
+}
+
+
+@mixin pos-overlay{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
+@mixin add-background($color){
+  background-color:$color;;
+  @if $color == $primary-color{
+    color:$light-color;
+  }
+  @elseif $color == $light-color{
+    color:$dark-color;
+  }
+  @elseif $color == $secondary-color{
+    color:$light-color;
+  }
+  @elseif $color == $light-gray-color{
+    color:$dark-color;
+  }
+  @elseif $color == $dark-blue{
+    color:$light-color;
+  }
+  @else{
+    color: $secondary-color;
+  }
+}
+
+@mixin border-radius($radius){
+  -moz-border-radius:$radius;
+  -webkit-border-radius:$radius;
+  border-radius:$radius;
+}

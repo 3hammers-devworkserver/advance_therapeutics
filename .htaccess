@@ -1,0 +1,14 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /advtx/
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^3h-admin/?$ /advtx/wp-login.php [QSA,L]
+RewriteRule ^3h-admin/register/?$ /advtx/wp-login.php?action=register [QSA,L]
+RewriteRule ^3h-admin/lostpassword/?$ /advtx/wp-login.php?action=lostpassword [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /advtx/index.php [L]
+</IfModule>
+
+# END WordPress

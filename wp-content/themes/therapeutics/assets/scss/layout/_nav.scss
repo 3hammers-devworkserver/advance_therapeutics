@@ -1,0 +1,136 @@
+/*navbar*/
+.navbar.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 0;
+    min-height: auto;
+    padding: 20px 0;
+    @include transition(all, 0.3s, ease-in-out, 0s)
+
+	.navbar-brand{
+		height:auto;
+		img{
+			height: 70px;
+		}
+	}
+    .navbar-toggle{
+    	border-radius:0;
+    	border:medium none;
+    	margin-top: 30px;
+    	.icon-bar{
+    		background: $light-color;
+    	}
+    	&:hover,
+    	&:focus{
+    		background-color:transparent;
+    		.icon-bar{
+    			background:$secondary-color;
+    		}
+    	}
+    }
+}
+.navbar-default.navbg{
+	@include transition(all, 0.3s, ease-in-out, 0s)
+	background:rgba(33, 53, 64, 0.95);
+	padding: 0;
+
+	.navbar-brand{
+		img{
+			height: 50px;
+		}
+	}
+	.navbar-toggle{
+		margin-top: 25px;
+    
+    }
+}
+/*sidebar menu */
+.navmenu {
+	.menu {
+		li{
+			position: relative;
+			
+			&:after{
+				position:absolute;
+				left: 0;
+				bottom: 0;
+				width: 50%;
+				height: 1px;
+				background:#30312e;
+				content: '';
+			}
+			a{
+				padding:15px 20px;
+				display: block;
+				text-transform: capitalize;
+				cursor: pointer;
+				&:hover,
+				&:focus{
+					color:$light-color;
+				}
+				i{
+					float: right;
+				}
+			}	
+		}
+		.dropdown-menu{
+			background: transparent;
+
+			li{
+				a{
+					color: $secondary-color;
+					padding-left: 40px;
+					padding-right: 40px;
+					&:hover,
+					&:focus{
+						background-color: transparent;
+						color:$light-color;
+					}
+				}
+				&:last-of-type{
+					&:after{
+						display:none;
+					}
+				}
+			}
+		}
+		&:nth-child(2){
+			li{
+				&:after{
+					display:none;
+				}
+				a{
+					color: $dark-gray;
+
+					&:hover,
+					&:focus{
+						color:$light-color;
+					}
+				}
+			}
+		}
+	}
+	.social-links{
+		margin-top: 20px;
+		padding-left: 25px;
+		padding-top: 25px;
+		position: relative;
+		&:before{
+				position:absolute;
+				left: 0;
+				top: 0;
+				width: 50%;
+				height: 1px;
+				background:#30312e;
+				content: '';
+			}
+		a{
+			color: $dark-gray;
+			&:hover,
+			&:focus{
+				color:$light-color;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,42 @@
+/*---------------
+	Footer
+----------------*/
+.footer-wrapper{
+	color:$dark-gray;
+	background:#1b1c19;
+	a{
+		color:$dark-gray;
+		&:hover{
+			color:$secondary-color;
+		}
+	}
+	.footer-menu{
+		padding-top: 25px;
+	}
+	.footer-logo{
+		text-align: center;
+	}
+	.social-links{
+		text-align: right;
+		padding-top: 25px;
+	}
+	.list-inline {
+		li {
+		  padding-left: 12px;
+		  padding-right: 12px;
+		}
+	}
+	.primary-footer{
+		padding-top: 50px;
+	}
+	.secondary-footer{
+		.container{
+			border-top:1px solid #2c2a2a;
+			padding: 30px 0;
+			margin-top: 60px;
+			p{
+				margin: 0;
+			}
+		}
+	}
+}

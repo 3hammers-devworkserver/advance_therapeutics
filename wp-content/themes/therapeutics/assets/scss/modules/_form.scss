@@ -1,0 +1,93 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+.form-control{
+	border:1px solid #9a9b9b;
+	background-color: transparent;
+	@include border-radius(0);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	height: 40px;
+
+	&:focus{
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border-color:$secondary-color;
+	}
+}
+textarea{
+	min-height: 120px;
+	width: 100%;
+}
+
+.form-btm-outline{
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"],
+	input[type="tel"],
+	textarea,
+	.form-control{
+		border-width: 0 0 1px 0;
+		border-style: solid;
+
+		&:focus{
+			border-color:#9a9b9b;
+			
+	
+		}
+	}
+	.input-group-addon{
+		@include border-radius(0);
+		background-color: transparent;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: #9a9b9b;
+		padding:6px 5px 6px 0;
+	}
+	.input-grp{
+		position: relative;
+		.input-grp-addon{
+			position: absolute;
+			top: 7px;
+		}
+		.form-control{
+			padding-left: 25px;
+		}
+	}
+}
+.form-group{
+	label{
+		font-weight: 300;
+		font-size: 15px;
+		em{
+			color: #f01a1a;
+		}
+	}
+}
+input[type="checkbox"],
+input[type="radio"]{
+	&:focus,
+	&:active,
+	&:hover{
+		outline:0;
+	}
+
+}
+.dob-select{
+	label{
+		display: block;
+	}
+	select.form-control{
+		float: left;
+		width: 30%;
+		margin-right: 18px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}

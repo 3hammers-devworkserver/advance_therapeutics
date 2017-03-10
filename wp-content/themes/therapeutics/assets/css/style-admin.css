@@ -1,0 +1,13 @@
+.custom-post-options label{
+	float: left;
+	width: 100px;
+}
+.custom-post-options .input-wrap{
+	margin-left: 120px;
+}
+.custom-post-options .input-wrap input{
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

@@ -1,0 +1,189 @@
+
+body {
+  font-size:$base-font-size;
+  line-height:$base-line-height;
+  font-family:$base-font-family;
+  font-weight:400;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+p:last-of-type{
+  margin-bottom: 0;
+}
+a {
+  color: $secondary-color;
+  &:hover {
+    color: darken($secondary-color, 20%);
+    text-decoration: none;
+  }
+  &:active {
+    color: darken($secondary-color, 20%);
+    text-decoration: none;
+  	outline: 0;
+  }
+  &:focus{
+    color: darken($secondary-color, 20%);
+    text-decoration: none;
+  	outline: 0;
+  }
+}
+input,  
+textarea,
+.form-control {  
+    @include input-placeholder {
+    color:$dark-gray;
+    opacity: 1;
+    }
+}
+img{
+  max-width: 100%;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+/*Typography*/
+h1{
+	font-size:34px;
+	line-height:1.2;
+	font-weight: 400;
+
+}
+/* buttons */
+.btn{
+	padding: 10px 20px;
+}
+.btn-primary{
+  background-color: $primary-color;
+  border-color: $primary-color;
+  border-radius: 0;
+}
+.btn-primary:hover{
+  background-color: darken($primary-color, 10%);
+}
+.btn-secondary{
+	background-color: $secondary-color;
+	border-color: $secondary-color;
+	border-radius: 0;
+  color: $light-color;
+}
+.btn-secondary:hover{
+  background-color: darken($secondary-color, 10%);
+  color: $light-color;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+
+   input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+  }
+}
+
+
+/*paddings*/
+.p20left{
+	padding-left: 20px;
+}
+.p20right{
+	padding-right: 20px;
+}
+.p20top{
+	padding-top: 20px;
+}
+.p20bottom{
+	padding-bottom: 20px;
+}
+
+/*------------------------------
+  Block background and text color
+-------------------------------*/
+.primary-block{
+  @include add-background($primary-color);
+}
+.secondary-block{
+  @include add-background($secondary-color);
+}
+.light-block{
+  @include add-background($light-color);
+}
+.dark-block{
+  @include add-background($dark-color);
+}
+.light-gray{
+  @include add-background($light-gray-color);
+}
+.dark-blue{
+  @include add-background($dark-blue);
+  .inner_page_title{
+    color: $light-color;
+  }
+}
+/*sectio  title styles*/
+.section-title{
+	padding: 80px 0;
+	[class*='col-']:first-child,
+	[class^='col-']:first-child {
+
+	text-align: left;
+  padding-right: 100px;
+		
+	}
+	h1{
+		margin: 0;
+    font-size: 40px;
+	}
+  p{
+    padding-top: 0px;
+  }
+
+
+}
+
+.inner_page_title{
+      margin: 0;
+      color:$dark-color;
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      span{
+        font-weight: 600;
+      }
+}
+.full-width-background{
+  min-height: 400px;
+}
+@function set-color($color) {
+    @if (lightness($color) > 40) {
+      @return $primary-color;
+    }
+    @else {
+      @return $light-color;
+    }
+}
+.dark {
+    padding: 100px 0;
+    background-color: $primary-color;
+
+    .inner_page_title{
+     color: set-color($primary-color);
+    }    
+    p {
+      color: set-color($primary-color);
+    }
+}

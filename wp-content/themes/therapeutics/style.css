@@ -1,0 +1,197 @@
+/*
+Theme Name: therapeutics
+Theme URI: 
+Author: 3hammers
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+#wpmem_reg .form .div_text input{
+width:100%;
+
+}
+
+#wpmem_reg .form .div_text input[type=password], #wpmem_login .form .div_text input[type=password]{
+  width:94.5%;
+}
+#wpmem_reg .form .button_div input.buttons, #wpmem_login .form .button_div input.buttons{
+  box-shadow:0 3px 0 0 #00A0AC;
+  font-size: 12px;
+  line-height: 100%;
+  padding: 12px 26px;
+  background-color:#00C8D7;
+  border:0;
+  color:#fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  transition: color 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s, border 0.2s ease-in-out 0s;
+  font-size: 12px;
+  font-weight: 700;
+
+}
+#wpmem_reg .form .button_div input.buttons:active {
+  box-shadow: 0 1px 0 0 #00A0AC;
+}
+#wpmem_reg .form .button_div input[type=reset]{
+background:#222;
+box-shadow:0 3px 0 0 #454545;
+margin-right:10px;
+
+  
+}
+
+#wpmem_reg .req-text{
+font-size:15px;
+}
+
+.wpmem_msg{
+  border: 1px solid #bd3500 !important;
+  
+  padding:0 20px !important;
+  text-align:left !important;
+
+}
+.wpmem_msg p b{color:#bd3500;}
+.wpmem_msg p{margin-bottom:0; line-height:20px;}
+
+#mk-header .header-logo.left-logo {
+ 
+  /* padding-top: 11px; */
+}
+
+#wpmem_reg label.text, #wpmem_reg label.checkbox, #wpmem_reg label.select, #wpmem_login label, #wpmem_reg label.textarea{
+text-align:right;}
+#wpmem_reg .req{line-height:0 !important; font-size:20px !important;}
+#wpmem_reg label.text, #wpmem_reg label.checkbox, #wpmem_reg label.select, #wpmem_login label, #wpmem_reg label.textarea{font-size:15px;}
+
+#wpmem_reg .button_div, #wpmem_login .button_div{width:50% !important; color: #BD3500;}
+
+ul.product-categories li ul.children li{border:none;}
+ul.product-categories li ul.children{padding-left:15px;}
+
+
+/* information page */
+
+td input[type="checkbox"]{
+  margin-right: 10px !important;
+}
+
+.step fieldset {
+  border:0;
+ 
+}
+.step fieldset .row{
+  width: 66%;
+}
+.step fieldset h1{
+  
+  color: #777067 !important;
+  font-size: 24px !important;
+   
+}
+.step .group {
+  padding-bottom: 20px;
+}
+
+.step input.input_field_12em, .step input.username {
+  background: #FAFAFA !important;
+  border: 1px solid #E3E3E3;
+  color: #767676;
+  font-size: 13px;
+  margin-bottom: 4px;
+  outline: 0 none;
+  padding: 10px;
+  width: 60%;
+}
+.step input[type=password] {
+  width: 57%;
+}
+
+.step textarea, .step select {
+  background:#FAFAFA !important;
+  width: 60%;
+}
+
+.step textarea{
+  height: 120px;
+  padding: 5px;
+  color: #767676;
+  font-weight: normal;
+}
+
+.step select{
+  padding: 8px;
+ 
+}
+.step select option, .step select{
+ 
+  font-weight: normal !important;
+  color: #000 !important;
+}
+
+
+.step input.input_field_12em:focus, .step input.input_field_12em:hover, .step textarea:hover, .step textarea:focus, .step select:hover, .step select:focus {
+  background: #FFFFFF !important;
+}
+.step .req-text {
+ 
+  font-size: 15px;
+  text-align: center;
+  width: 52%;
+}
+
+.step .req{ color: #BD3500;}
+
+.step  h4 {
+  
+  padding: 15px 0;
+  
+}
+
+.step .row {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.step .row br{
+  display: none;
+}
+
+.step .row div.checkbox{
+  padding: 10px 0;
+}
+
+.step .row div.checkbox .options{
+  font-size: 15px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.step .row div.checkbox .options input[type="checkbox"], .step .row div.checkbox .options input[type="radio"]{
+  margin-right: 4px;
+}
+
+.step label.text, .step label.textarea{
+  float: left;
+  padding: 11px 0 0 0;
+  width: 30%;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: normal;
+
+}
+.step label.error {
+  color: #FF0000;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left:17.2em;
+  margin-top: 0;
+}
