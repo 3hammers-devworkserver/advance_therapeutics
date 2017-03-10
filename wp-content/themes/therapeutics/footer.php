@@ -126,8 +126,8 @@
                           </div>
                           <div class="col-md-6 text-right">
                            <a href="http://3hammers.com" target="_blank">
-              Digital Agency
-              <img src="<?php echo get_template_directory_uri(). '/assets/images/3hammers_footer.png'; ?>" width="20">
+              Digital Agency &nbsp;
+              <img src="<?php echo get_template_directory_uri(). '/assets/images/3hammers_footer.png'; ?>" width="30">
             </a></p>
                        </div>
                    </div>

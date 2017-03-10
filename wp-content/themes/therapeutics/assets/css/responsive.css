@@ -157,10 +157,12 @@
 	}
 	.section-title h1{
 		margin-bottom: 20px;
+		font-size: 30px;
 	}
 	.section-title [class*="col-"]:first-child, 
 	.section-title [class^="col-"]:first-child {
 	  text-align: left;
+	  padding-right: 15px;
 	}
 	.post-wrapper .post-image::before{
 		display: none;

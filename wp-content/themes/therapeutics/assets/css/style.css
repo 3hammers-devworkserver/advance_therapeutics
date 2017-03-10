@@ -208,6 +208,14 @@ h1 {
   padding-top: 0px;
 }
 
+.section-title .viewmore-btn {
+  padding-top: 30px;
+}
+
+.section-title .viewmore-btn a {
+  font-size: 18px;
+}
+
 .inner_page_title {
   margin: 0;
   color: #292929;
